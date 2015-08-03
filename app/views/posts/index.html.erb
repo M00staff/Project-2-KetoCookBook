@@ -1,0 +1,11 @@
+INDEX
+
+<%= link_to "New Post", new_post_path(@post) %>
+
+<ul>
+<% @posts.each do |post| %>
+<li>
+  <%= link_to "#{post.author} - #{post.post_body}", post_path(post) %>
+</li>
+<% end %>
+</ul>

@@ -1,0 +1,20 @@
+<p> Show Post </p>
+
+<p> <%= @post.post_body %> </p>
+
+<img class='post_photo' src="<%= @post.photo_url %>">
+
+<% @post.comments.each do |comment| %>
+<ul>
+  <li> <%= comment.author %> </li>
+  <li> <%= comment.comment_body %> </li>
+  <% end %>
+</ul>
+
+<p>
+<%= link_to "Add Comment", new_post_comment_path(@post.id) %>
+</p>
+
+<%= form_for(@post, method: :delete) do |f| %>
+  <%= f.submit "Delete Post", class: "delete" %>
+<% end %>

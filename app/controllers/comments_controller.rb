@@ -7,7 +7,7 @@ end
 
 def create
   @post = Post.find(params[:post_id])
-  @comment = Comment.create!(post_params.merge(post: @post))
+  @comment = Comment.create!(comment_params.merge(post: @post))
   redirect_to posts_path(@post)
 end
 

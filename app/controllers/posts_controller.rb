@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+     @posts = User.find(session[:user]["id"]).posts
   end
 
 def show
@@ -19,11 +19,11 @@ def new
 end
 
 def create
-@post = Post.new(post_params)
-@post.save
-redirect_to posts_path(@post)
-end
+  @user = User.find(session[:user]["id"])
+  @post = @user.posts.create!(post_params)
+  redirect_to (post_path(@post))
 
+end
 
 
 private

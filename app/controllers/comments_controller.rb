@@ -15,9 +15,14 @@ def show
   @comment = Comment.all
 end
 
+def destroy
+  @comment = Comment.find(params[:id])
+  @comment.destroy
+  redirect_to posts_path
+end
 
 private
-def post_params
+def comment_params
   params.require(:comment).permit(:author, :comment_body)
 end
 

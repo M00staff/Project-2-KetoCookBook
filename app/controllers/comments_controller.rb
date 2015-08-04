@@ -9,7 +9,8 @@ def create
   @post = Post.find(params[:post_id])
   @user = User.find(session[:user]["id"])
   @comment = @user.comments.create!(comment_params.merge(post: @post))
-  redirect_to posts_path(@post)
+  redirect_to (post_path(@post))
+
 end
 
 def show

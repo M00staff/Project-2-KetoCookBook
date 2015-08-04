@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-     @posts = User.find(session[:user]["id"]).posts
+     @posts = Post.all
   end
 
 def show

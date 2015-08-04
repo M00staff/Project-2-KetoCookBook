@@ -1,14 +1,14 @@
 <p> Show Post </p>
 
 <p> <%= @post.post_body %> </p>
+<p> <%= @post.user.try(:username) %> </p>
 
 <%= image_tag("#{@post.photo_url}", :alt => "Delicious food") %>
 
-<!-- <img src="http://stout.hampshire.edu/~jll09/biscologo.jpg"> -->
-
 <% @post.comments.each do |comment| %>
 <ul>
-  <li> <%= comment.author %> </li>
+  <li> <%= @user %> </li>
+  <li> <%= comment.user.to_json %> </li>
   <li> <%= comment.comment_body %> </li>
   <% end %>
 </ul>

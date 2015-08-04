@@ -7,8 +7,8 @@ end
 
 def create
   @post = Post.find(params[:post_id])
-  @comment = Comment.create!(comment_params.merge(post: @post))
   @user = User.find(session[:user]["id"])
+  @comment = @user.comments.create!(comment_params.merge(post: @post))
   redirect_to posts_path(@post)
 end
 
@@ -24,7 +24,7 @@ end
 
 private
 def comment_params
-  params.require(:comment).permit(:author, :comment_body)
+  params.require(:comment).permit(:author, :comment_body, :user)
 end
 
 

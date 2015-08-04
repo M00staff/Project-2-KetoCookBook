@@ -1,14 +1,14 @@
 <p> Show Post </p>
 
-<p> <%= @post.post_body %> </p>
 <p> <%= @post.user.try(:username) %> </p>
+<p> <%= @post.post_body %> </p>
+
 
 <%= image_tag("#{@post.photo_url}", :alt => "Delicious food") %>
 
 <% @post.comments.each do |comment| %>
 <ul>
-  <li> <%= @user %> </li>
-  <li> <%= comment.user.to_json %> </li>
+  <li> <%= comment.user.try(:username) %> </li>
   <li> <%= comment.comment_body %> </li>
   <% end %>
 </ul>

@@ -2,7 +2,9 @@
 
 <p> <%= @post.post_body %> </p>
 
-<img class='post_photo' src="<%= @post.photo_url %>">
+<%= image_tag("#{@post.photo_url}", :alt => "Delicious food") %>
+
+<!-- <img src="http://stout.hampshire.edu/~jll09/biscologo.jpg"> -->
 
 <% @post.comments.each do |comment| %>
 <ul>

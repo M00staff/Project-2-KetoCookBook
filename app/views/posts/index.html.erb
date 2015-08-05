@@ -3,7 +3,7 @@
 <ul>
 <% @posts.each do |post| %>
 <li>
-  <%= link_to "#{post.user.try(:username)} - #{post.post_body}", post_path(post) %>
+  <%= link_to "#{post.user.try(:username)} - #{post.title}", post_path(post) %>
 </li>
 <% end %>
 </ul>

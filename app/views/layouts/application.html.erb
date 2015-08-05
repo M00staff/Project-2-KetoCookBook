@@ -16,6 +16,7 @@
       <li><a href="/sign_up">Sign up</a></li>
       <li><a href="/sign_in">Sign in</a></li>
     <% end %>
+    <li><%= link_to "Add New Recipe", new_post_path(@post) %></li>
     <li><a href="/posts">Home</a></li>
   </ul>
   </nav>
@@ -23,7 +24,7 @@
 <div class="sideBar">
   <ul>
     <li>Home</li>
-    <li>News</li>
+    <li><%= link_to "Add New Recipe", new_post_path(@post) %></li>
     <li>Contact</li>
     <li>About</li>
   </ul>

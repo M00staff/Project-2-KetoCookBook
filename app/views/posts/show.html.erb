@@ -1,15 +1,20 @@
 <p> Show Post </p>
 
-<p> <%= @post.user.try(:username) %> </p>
-<p> <%= @post.post_body %> </p>
+<p class="showPostHeading">User <%= @post.user.try(:username) %>'s submission </p>
 
 
-<%= image_tag("#{@post.photo_url}", :alt => "Delicious food") %>
+<p class="postBodyShowPost"> <%= @post.post_body %> </p>
+
+<div class="photoShow">
+<%= image_tag("#{@post.photo_url}", :class => "imageShow") %>
+</div>
+
+<p> comments </p>
 
 <% @post.comments.each do |comment| %>
 <ul>
-  <li> <%= comment.user.try(:username) %> </li>
-  <li> <%= comment.comment_body %> </li>
+  <li><%= comment.user.try(:username) %> says</li>
+  <%= comment.comment_body %>
   <% end %>
 </ul>
 

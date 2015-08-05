@@ -7,19 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <h1>The KetoCookBook</h1>
 
-  <nav>
+  <nav id="topNav">
+    <ul>
     <% if session[:user] %>
-      <a href="/sign_out"><%= session[:user]["username"] %>: sign out</a></h2>
+      <li><a href="/sign_out"><%= session[:user]["username"] %>: sign out</a></li>
     <% else %>
-      <a href="/sign_up">Sign up</a>
-      <a href="/sign_in">Sign in</a>
+      <li><a href="/sign_up">Sign up</a></li>
+      <li><a href="/sign_in">Sign in</a></li>
     <% end %>
-    <a href="/posts">Posts</a>
+    <li><a href="/posts">Home</a></li>
+  </ul>
   </nav>
 
-<h2><%= flash[:notice] %>
+  <h1>The KetoCookBook</h1>
+
+
+
+<%= flash[:notice] %>
 
 <%= yield %>
 

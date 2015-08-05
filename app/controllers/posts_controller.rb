@@ -28,7 +28,7 @@ end
 
 private
 def post_params
-  params.require(:post).permit(:author, :post_body, :photo_url)
+  params.require(:post).permit(:title, :post_body, :photo_url)
 end
 
 

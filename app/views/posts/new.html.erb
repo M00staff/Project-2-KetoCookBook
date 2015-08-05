@@ -1,12 +1,18 @@
 Create new Post
 
-<%=form_for @post do |f| %>
+<div class="newPost">
 
-  <%= f.label :photo_url %>
-  <%= f.text_field :photo_url %>
+  <%=form_for @post do |f| %>
 
-  <%= f.label :post %>
-  <%= f.text_area :post_body %>
+  <div id="photoTextBox">
+    <%= f.text_field :photo_url, size: "50x5", :placeholder => "Photo_url" %>
+  </div>
 
-<%= f.submit %>
-<% end %>
+  <div id="postTextBox">
+
+    <%= f.text_area :post_body, size: "100x10", :placeholder => "Recipe" %>
+  </div>
+
+  <%= f.submit %>
+  <% end %>
+</div>

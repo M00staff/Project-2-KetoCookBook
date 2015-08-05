@@ -66,6 +66,25 @@ h1{
   color: #616161;
   padding: 10px 0;
 }
+
+.sideBar{
+  float: right;
+  border: 1px solid #ccc;
+  position:absolute;
+  right:0; top:92px; bottom: 0;
+  width: 207px;
+}
+
+.sideBar ul{
+  text-align: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

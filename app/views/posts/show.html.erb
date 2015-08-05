@@ -2,12 +2,11 @@
 
 <p class="showPostHeading">User <%= @post.user.try(:username) %>'s submission </p>
 
-
-<p class="postBodyShowPost"> <%= @post.post_body %> </p>
-
 <div class="photoShow">
 <%= image_tag("#{@post.photo_url}", :class => "imageShow") %>
 </div>
+
+<p class="postBodyShowPost"> <%= @post.post_body %> </p>
 
 <p> comments </p>
 

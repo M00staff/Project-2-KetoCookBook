@@ -17,6 +17,7 @@ h1{
 .postBodyShowPost {
   text-align: center;
   background-color: lemonchiffon;
+  word-wrap: break-word;
   }
 
 /*.photoShow{
@@ -68,10 +69,11 @@ h1{
 }
 
 .sideBar{
+
   border: 1px solid #ccc;
-  position:absolute;
-  right:0; top:92px; bottom: 0;
-  width: 207px;
+  float: left;
+  height: 30em;
+  width: 200px;
 }
 
 .sideBar ul{
@@ -81,7 +83,9 @@ h1{
   padding: 0;
 }
 
-
+.sideBar ul li{
+  padding: 1em;
+}
 
 
 /*

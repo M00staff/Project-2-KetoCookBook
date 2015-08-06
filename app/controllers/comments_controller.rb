@@ -5,6 +5,19 @@ def new
   @comment = Comment.new
 end
 
+def edit
+  @comment = Comment.find(params[:post_id])
+  @post = Post.find(params[:post_id])
+  @current_user = User.find(session[:user]["id"])
+end
+
+def update
+  @comment = Comment.find(params[:id])
+  @post = Post.find(params[:post_id])
+  @comment.update(song_params.merge(post: @post)
+  redirect_to (post_path(@post))
+end
+
 def create
   @post = Post.find(params[:post_id])
   @user = User.find(session[:user]["id"])
@@ -14,6 +27,7 @@ def create
 end
 
 def show
+  @current_user = User.find(session[:user]["id"])
   @comment = Comment.all
 end
 

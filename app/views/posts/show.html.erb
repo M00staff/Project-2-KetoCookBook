@@ -13,7 +13,7 @@
 <% @post.comments.each do |comment| %>
 <ul>
   <li><%= comment.user.try(:username) %> says</li>
-  <%= comment.comment_body %>
+  <%= comment.comment_body %> <% if comment.user == @current_user %> <%= link_to "Edit Comment", new_post_comment_path(@post.id) %> <% end %>
   <% end %>
 </ul>
 

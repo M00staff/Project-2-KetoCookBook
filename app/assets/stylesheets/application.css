@@ -10,13 +10,11 @@ h1{
   }
 
 .showPostHeading{
-  background-color: lemonchiffon;
   text-align: center;
   }
 
 .postBodyShowPost{
   text-align: center;
-  background-color: lemonchiffon;
   word-wrap: break-word;
   }
 
@@ -76,6 +74,9 @@ h1{
   float: left;
   height: 30em;
   width: 200px;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 1em;
+  color: blue;
 }
 
 .sideBar ul{

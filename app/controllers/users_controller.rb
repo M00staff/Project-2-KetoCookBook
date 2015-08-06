@@ -40,7 +40,6 @@ class UsersController < ApplicationController
     end
     flash[:notice] = message
     redirect_to posts_path
-    # redirect_to action: :sign_in
   end
 
   def sign_out
@@ -48,5 +47,7 @@ class UsersController < ApplicationController
     flash[:notice] = "You're signed out!"
     redirect_to root_url
   end
+
+
 
 end

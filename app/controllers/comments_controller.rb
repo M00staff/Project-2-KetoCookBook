@@ -6,7 +6,7 @@ def new
 end
 
 def edit
-  @comment = Comment.find(params[:post_id])
+  @comment = Comment.find(params[:id])
   @post = Post.find(params[:post_id])
   @current_user = User.find(session[:user]["id"])
 end
@@ -14,7 +14,7 @@ end
 def update
   @comment = Comment.find(params[:id])
   @post = Post.find(params[:post_id])
-  @comment.update(song_params.merge(post: @post)
+  @comment.update(comment_params.merge(post: @post))
   redirect_to (post_path(@post))
 end
 

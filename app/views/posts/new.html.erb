@@ -5,13 +5,13 @@
   <%=form_for @post do |f| %>
 
   <div id="photoTextBox">
-    <%= f.text_field :photo_url, size: "50x5", :placeholder => "Photo_url" %>
     <%= f.text_field :title, size: "50x5", :placeholder => "title" %>
+    <%= f.text_field :photo_url, size: "50x5", :placeholder => "Photo_url" %>
   </div>
 
   <div id="postTextBox">
 
-    <%= f.text_area :post_body, size: "100x10", :placeholder => "Recipe" %>
+    <%= f.text_area :post_body, size: "101.5x10", :placeholder => "Recipe" %>
   </div>
 
   <%= f.submit %>

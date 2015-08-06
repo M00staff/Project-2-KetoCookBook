@@ -1,4 +1,6 @@
 body{
+  font-family: fantasy;
+  position: absolute;
   background: #f0f0f0;
 }
 
@@ -14,6 +16,7 @@ h1{
   }
 
 .postBodyShowPost{
+  font-family: monospace;
   text-align: center;
   word-wrap: break-word;
   }
@@ -68,14 +71,19 @@ h1{
   padding: 10px 0;
 }
 
+#topNav ul li a:hover{
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  background-color: silver;
+}
+
 .sideBar{
-  display: block;
-  border: 1px solid #ccc;
-  float: left;
-  height: 30em;
+
+  float: right;
+  height: 75em;
   width: 200px;
   text-shadow: 1px 1px 1px #000;
-  font-size: 1em;
   color: blue;
 }
 
@@ -116,6 +124,18 @@ h1{
 
 .homeIndex ul{
   list-style-type: none;
+}
+
+.commentSection{
+  font-family: cursive;
+}
+
+#addComment a:hover{
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  font-size: 2em;
+  color: black;
 }
 
 /*

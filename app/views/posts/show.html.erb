@@ -7,19 +7,20 @@
 
 <p class="postBodyShowPost"> <%= simple_format(@post.post_body, class: 'postBodyShowPost') %> </p>
 
+<div class="commentSection">
 <p> comments </p>
 
 <% @post.comments.each do |comment| %>
 <ul>
   <li><%= comment.user.try(:username) %> says</li>
-  <%= comment.comment_body %> <% if comment.user == @current_user %> <%= link_to "Edit Comment", edit_post_comment_path(@post.id, comment.id) %> <% end %>
+  <%= comment.comment_body %> <% if comment.user == @current_user %> <%= link_to "(Edit)", edit_post_comment_path(@post.id, comment.id) %> <% end %>
   <% end %>
 </ul>
 
-<p>
+<p id="addComment">
 <%= link_to "Add Comment", new_post_comment_path(@post.id) %>
 </p>
-
+</div>
 
 <%= form_for(@post, method: :delete) do |f| %>
 <%# if can? :manage, @post %>

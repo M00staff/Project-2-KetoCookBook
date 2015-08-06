@@ -1,10 +1,11 @@
 body{
   font-family: fantasy;
-  position: absolute;
+
   background: #f0f0f0;
 }
 
 h1{
+  width: 75%;
   text-shadow: 1px 1px 1px #000;
   font-size: 5em;
   color: blue;
@@ -55,7 +56,7 @@ h1{
   text-align: center;
   border-left: 1px solid #fff;
   border-right: 1px solid #ccc;
-  width: 16.6667%; fallback for non-calc() browsers
+  /*width: 16.6667%; fallback for non-calc() browsers*/
   width: calc(100% / 6);
   box-sizing: border-box;
 }
@@ -81,7 +82,7 @@ h1{
 .sideBar{
 
   float: right;
-  height: 75em;
+  height: 100%;
   width: 200px;
   text-shadow: 1px 1px 1px #000;
   color: blue;
@@ -102,7 +103,11 @@ h1{
   text-align: center;
 }
 
-#photoTextBox{
+.mainBody{
+  width: 75%;
+}
+
+/*#photoTextBox{
   text-align: center;
   display: block;
   margin-left: 90px;
@@ -112,7 +117,7 @@ h1{
   text-align: center;
   display: block;
   padding-top: 10px;
-}
+}*/
 
 .commentTextBox{
   text-align: center;
@@ -120,6 +125,7 @@ h1{
 
 .homeIndex{
   text-align: center;
+  font-family: cursive;
 }
 
 .homeIndex ul{
@@ -137,6 +143,11 @@ h1{
   font-size: 2em;
   color: black;
 }
+
+.signIn{
+  text-align: center;
+}
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

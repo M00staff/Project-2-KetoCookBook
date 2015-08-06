@@ -17,13 +17,16 @@
       <li><a href="/sign_in">Sign in</a></li>
     <% end %>
     <li><%= link_to "Add New Recipe", new_post_path(@post) %></li>
-    <li><a href="/posts">Home</a></li>
+    <li><a href="http://www.reddit.com/r/keto">What is Keto?</a></li>
+    <li><a href="http://www.reddit.com/r/ketogains">Do you lift, bro?</a></li>
+    <li><a href="http://M00staff.github.io">Back to GitHub Pages</a></li>
+    <li><a href="/">Home</a></li>
   </ul>
   </nav>
 
 <div class="sideBar">
   <ul>
-    <li></li>  
+    <li></li>
     <li>The KetoCookBook is an online database for submitting and storing your low-carb recipies and ideas</li>
     <li></li>
     <li>Please feel free to submit whatever you want</li>
@@ -38,7 +41,9 @@
 
 <%= flash[:notice] %>
 
+<div class="mainBody">
 <%= yield %>
+</div>
 
 </body>
 </html>

@@ -15,4 +15,7 @@ I used vanilla everything - i did toy with Bootstrap and CanCan a few days in, b
 
 My approach was pretty straight-forward, i wanted to make something simple that worked - and was hoping that i could finish early so i could use that extra time to refresh my JS and CSS skills.  I didn't get to do any JavaScript but i did get to spend a lot of time with CSS and am really glad i did (its kind of like riding a bike, i guess).  I took everything one at a time and managed my time quite well (which i think i am most proud of) i did not really get too stressed - which i am most happy about. I was really actually starting to enjoy rails towards the end there - mostly cause the error messages are so money.
 
-unsolved problems - only real issue is that while you can delte posts and edit comments - you cannot delete comments or edit posts. Also some kind of admin feature to delete and edit would be nice (i showed it to a few friends and already got a spammy post that also tried to dump my database lol)
+unsolved problems - only real issue is that while you can delete posts and edit comments - you cannot delete comments or edit posts. Also some kind of admin feature to delete and edit would be nice (i showed it to a few friends and already got a spammy post that also tried to dump my database lol)
+
+# Heroku Link
+http://keto-cook-book.herokuapp.com/ 

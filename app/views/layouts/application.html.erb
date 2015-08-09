@@ -12,6 +12,7 @@
     <ul>
     <% if session[:user] %>
       <li><a href="/sign_out"><%= session[:user]["username"] %>: sign out</a></li>
+      <li><a href="/">Home</a></li>
     <% else %>
       <li><a href="/sign_up">Sign up</a></li>
       <li><a href="/sign_in">Sign in</a></li>
@@ -20,7 +21,6 @@
     <li><a href="http://www.reddit.com/r/keto">What is Keto?</a></li>
     <li><a href="http://www.reddit.com/r/ketogains">Do you lift, bro?</a></li>
     <li><a href="http://M00staff.github.io">Back to GitHub Pages</a></li>
-    <li><a href="/">Home</a></li>
   </ul>
   </nav>
 
@@ -35,11 +35,13 @@
   </ul>
 </div>
 
-  <h1>The Keto CookBook</h1>
+  <h1>The Keto Cook Book</h1>
 
 
 
 <%= flash[:notice] %>
+
+<!--  wrapping the yeild in a Div really helped with the overall formatting, useful trick for CSS, i can thank Nick for that -->
 
 <div class="mainBody">
 <%= yield %>

@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
-
+# I was curious as to why you didn't include edit/update functionality for the
+# posts. Other than that posts controller looks great, little bit of indentation issues
   def index
      @posts = Post.all
   end

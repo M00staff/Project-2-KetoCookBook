@@ -10,7 +10,8 @@
 
 <div class="commentSection">
   <p> comments </p>
-
+<!-- I'm curious how the comments are indenting like that. Additionally, it would be
+really nice if i could create a comment right on the show page. How could we incorporate that? -->
     <% @post.comments.each do |comment| %>
     <ul>
       <li><%= comment.user.try(:username) %> says</li>

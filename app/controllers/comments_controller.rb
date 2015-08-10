@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
 
 #@Current_User is in a lot of places - i was having issues getting the edit and delete buttons to only show for the current user
 
+# you could always create a current_user helper method
 def new
   @post = Post.find(params[:post_id])
   @comment = Comment.new

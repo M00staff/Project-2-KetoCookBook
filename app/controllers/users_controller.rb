@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   skip_before_action :authenticate
-
+# nice hand rolled user auth. sick
   def sign_up
   end
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # routes look good
   root to: 'posts#index'
 
   resources :posts do

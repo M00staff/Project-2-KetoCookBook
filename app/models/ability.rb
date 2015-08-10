@@ -1,7 +1,8 @@
 class Ability
+  # were you able to incorpoate cancan? I think its implementation isn't too complicated.
   include CanCan::Ability
 
-  def initialize(user)  
+  def initialize(user)
     can :manage, Post, :user_id => @current_user
     # Define abilities for the passed in user here. For example:
     #
